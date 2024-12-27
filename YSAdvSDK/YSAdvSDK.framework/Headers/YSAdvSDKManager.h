@@ -16,13 +16,28 @@ typedef NS_ENUM(NSUInteger, YSTestingEnvironmentType) {
     YSTestingEnvironmentTypeTest = 1,        //**< 测试环境  */
 };
 
+typedef NS_ENUM(NSUInteger, YSAdvSDKPackageType) {
+    YSAdvSDKPackageTypeChina = 0,       //**< 国内  */
+    YSAdvSDKPackageTypeOther = 1,        //**< 海外  */
+};
+
 @interface YSAdvSDKManager : NSObject
+
 
 /**
  * 获取 SDK 版本
  */
 
 + (NSString *)sdkVersion;
+
+
+/**
+ 设置SDK类型国内、海外 和areaId
+ 第一步必须先设置SDK类型
+ @param sdkType SDK类型
+ @param areaId 区域id
+ */
++ (void)setAdvSDKPackageType:(YSAdvSDKPackageType)sdkType andAreaId:(NSString *)areaId;
 
 /**
  设置mediaID

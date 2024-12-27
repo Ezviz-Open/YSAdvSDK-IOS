@@ -1,0 +1,6 @@
+framework module YSAdvSDK {
+  umbrella header "YSAdvSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

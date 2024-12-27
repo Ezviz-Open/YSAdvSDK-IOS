@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class YSAdvSDKSplashView;
+
 @protocol YSSplashAdDelegate <NSObject>
 
 @optional
@@ -16,51 +18,51 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  广告加载成功
  */
-- (void)splashAdLoadSuccess;
+- (void)ysSplashAdLoadSuccess:(YSAdvSDKSplashView *)splashAd;;
 
 /**
  广告加载失败
  @param errorCode 错误码
  @param errorMessage 错误信息
  */
-- (void)splashAdLoadFail:(NSInteger)errorCode andErrorMessage:(NSString *)errorMessage;
+- (void)ysSplashAdLoadFail:(NSInteger)errorCode andErrorMessage:(NSString *)errorMessage;
 
 /**
  广告曝光成功
  */
-- (void)splashAdExposedSuccess;
+- (void)ysSplashAdExposedSuccess;
 
 /**
  广告展示失败
  @param errorMessage 错误信息
  */
-- (void)splashAdShowFail:(NSString *)errorMessage;
+- (void)ysSplashAdShowFail:(NSString *)errorMessage;
 
 /**
  广告点击跳过
  */
-- (void)splashAdClickSkip;
+- (void)ysSplashAdClickSkip;
 
 /**
  广告完成倒计时
  */
-- (void)splashAdFinishCountdown;
+- (void)ysSplashAdFinishCountdown;
 
 /**
  广告被点击
  @param hiddenAdvWindow 隐藏传入的window(若自定义window传入需处理)
  */
-- (void)splashAdDidClicked:(BOOL)hiddenAdvWindow;
+- (void)ysSplashAdDidClicked:(BOOL)hiddenAdvWindow;
 
 /**
  广告关闭了
  */
-- (void)splashAdDidClosed;
+- (void)ysSplashAdDidClosed;
 
 /**
  广告关闭了另一个控制器
  */
-- (void)splashAdDidCloseOtherController;
+- (void)ysSplashAdDidCloseOtherController;
 
 
 @end
@@ -81,6 +83,19 @@ NS_ASSUME_NONNULL_BEGIN
  *  返回的竞价价格
  */
 - (double)salePrice;
+
+#pragma mark -bidding
+/**
+ *  发送竞胜
+ *  @param price 竞胜价格
+ */
+- (void)sendWinNotificationWithPrice:(NSInteger)price;
+
+/**
+ *  发送竞败
+ *  @param price 竞败价格
+ */
+- (void)sendWinFailNotificationWithPrice:(NSInteger)price;
 
 #pragma mark -加载开屏广告
 /**

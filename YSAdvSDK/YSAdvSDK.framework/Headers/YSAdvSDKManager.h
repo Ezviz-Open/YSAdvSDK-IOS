@@ -35,7 +35,7 @@ typedef NS_ENUM(NSUInteger, YSAdvSDKPackageType) {
  设置SDK类型国内、海外 和areaId
  第一步必须先设置SDK类型
  @param sdkType SDK类型
- @param areaId 区域id
+ @param areaId 区域id（国内可以不传,直接传@"" 海外必传）
  */
 + (void)setAdvSDKPackageType:(YSAdvSDKPackageType)sdkType andAreaId:(NSString *)areaId;
 

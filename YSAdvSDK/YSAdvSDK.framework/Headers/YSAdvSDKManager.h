@@ -57,6 +57,12 @@ typedef NS_ENUM(NSUInteger, YSAdvSDKPackageType) {
  */
 + (void)setLocationWithLongitude:(double)longitude andLatitude:(double)latitude;
 
+
+/**
+ 设置穿山甲个性化设置
+ 非必传，用户默认不屏蔽则不需要任何配置
+ */
++ (void)setBUUserExtData:(NSString *)userExtData;
 @end
 
 NS_ASSUME_NONNULL_END

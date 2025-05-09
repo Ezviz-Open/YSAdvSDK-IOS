@@ -59,10 +59,12 @@ typedef NS_ENUM(NSUInteger, YSAdvSDKPackageType) {
 
 
 /**
- 设置穿山甲个性化设置
- 非必传，用户默认不屏蔽则不需要任何配置
+ 是否屏蔽个性化广告
+ 非必传，默认不屏蔽
+ 0，屏蔽个性化推荐广告；
+ 1，不屏蔽个性化推荐广告；
  */
-+ (void)setBUUserExtData:(NSString *)userExtData;
++ (void)setPersonalAdsType:(NSInteger)type;
 @end
 
 NS_ASSUME_NONNULL_END

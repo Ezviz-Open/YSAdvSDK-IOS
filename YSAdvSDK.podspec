@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YSAdvSDK'
-  s.version          = '3.1.13'
+  s.version          = '3.1.14'
   s.summary          = 'A short description of YSAdvSDK.'
 
 # This description is used to generate tags and improve search results.

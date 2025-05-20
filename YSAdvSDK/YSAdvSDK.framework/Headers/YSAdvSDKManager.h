@@ -32,6 +32,13 @@ typedef NS_ENUM(NSUInteger, YSAdvSDKPackageType) {
 
 
 /**
+ 设置日志开关
+ 非必传，默认开启
+ */
++ (void)setOpenLog:(BOOL)isOpenLog;
+
+
+/**
  设置SDK类型国内、海外 和areaId
  第一步必须先设置SDK类型
  @param sdkType SDK类型

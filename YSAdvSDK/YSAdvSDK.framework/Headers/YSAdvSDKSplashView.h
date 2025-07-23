@@ -84,6 +84,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (double)salePrice;
 
+/**
+ *  移除所有子视图
+ */
+- (void)removeAllSubViews;
+
 #pragma mark -bidding
 /**
  *  发送竞胜

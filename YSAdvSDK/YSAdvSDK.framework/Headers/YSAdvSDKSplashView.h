@@ -118,7 +118,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  展示开屏广告
- *  @param window  keyWindow或者自定义window
+ *  @param window  自定义window
  *  @param bottomView  开屏广告半屏时下方展示视图
  */
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YSAdvSDK'
-  s.version          = '3.2.2'
+  s.version          = '3.2.3'
   s.summary          = 'YSAdvSDK is a comprehensive advertising SDK for iOS applications, providing advanced ad management and monetization capabilities.'
   s.description      = <<-DESC
 YSAdvSDK is a powerful advertising SDK designed for iOS applications. It provides comprehensive ad management features including banner ads, interstitial ads, native ads, and video ads. The SDK offers advanced targeting, analytics, and monetization capabilities to help developers maximize their advertising revenue.
@@ -11,12 +11,9 @@ YSAdvSDK is a powerful advertising SDK designed for iOS applications. It provide
   s.source           = { :git => "https://github.com/Ezviz-Open/YSAdvSDK-IOS.git", :tag => "#{s.version}"  }
 
   s.ios.deployment_target = '12.0'
-  # 使用 vendored_framework 而不是 source_files
   s.vendored_frameworks = 'YSAdvSDK/YSAdvSDK.framework'
-  # 使用 resource_bundles 配置 Bundle
-  s.resource_bundles = {
-   'YSAdvSDK' => ['YSAdvSDK/YSAdvSDK.bundle']
-  }
+  s.resources = "YSAdvSDK/YSAdvSDK.bundle"
+
   s.dependency 'Masonry'
   s.dependency 'ReactiveObjC'
   s.dependency 'SDWebImage'

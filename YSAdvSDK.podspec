@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YSAdvSDK'
-  s.version          = '3.2.5'
+  s.version          = '3.2.6'
   s.summary          = 'YSAdvSDK is a comprehensive advertising SDK for iOS applications, providing advanced ad management and monetization capabilities.'
   s.description      = <<-DESC
 YSAdvSDK is a powerful advertising SDK designed for iOS applications. It provides comprehensive ad management features including banner ads, interstitial ads, native ads, and video ads. The SDK offers advanced targeting, analytics, and monetization capabilities to help developers maximize their advertising revenue.

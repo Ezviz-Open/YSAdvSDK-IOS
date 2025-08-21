@@ -54,7 +54,7 @@ typedef NS_ENUM(NSUInteger, YSAdvSDKPackageType) {
 
 /**
  设置环境 分为测试环境、线上环境
- 必传
+ 必传，区分环境
  */
 + (void)setTestingEnvironment:(YSTestingEnvironmentType)type completion:(void(^)(BOOL success))completion;
 
